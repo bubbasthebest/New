@@ -1,0 +1,445 @@
+--- Services ---
+local UserInputService = game:GetService("UserInputService")
+db = false
+--- Services End ---
+
+--- GUI ---
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+
+
+
+
+local BackGround = Instance.new("Frame")
+BackGround.Name = "BackGround"
+BackGround.Size = UDim2.new(0.00, 857.00, 0.00, 501.00)
+BackGround.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+BackGround.Position = UDim2.new(0.44, -318.00, 0.42, -186.00)
+BackGround.BorderSizePixel = 0
+BackGround.BackgroundTransparency = 0.10000000149011612
+BackGround.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+BackGround.Parent = ScreenGui
+
+local UICorner = Instance.new("UICorner")
+UICorner.Parent = BackGround
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Thickness = 2.799999952316284
+UIStroke.Parent = BackGround
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.TextWrapped = true
+TextLabel.BorderSizePixel = 0
+TextLabel.TextScaled = true
+TextLabel.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
+TextLabel.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+TextLabel.TextSize = 14
+TextLabel.Size = UDim2.new(0.00, 200.00, 0.00, 50.00)
+TextLabel.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+TextLabel.Text = "kry.xyz"
+TextLabel.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.00, 0.00, 0.02, 0.00)
+TextLabel.Parent = BackGround
+
+local Bar = Instance.new("Frame")
+Bar.Name = "Bar"
+Bar.Size = UDim2.new(0.00, 857.00, 0.00, 4.00)
+Bar.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Bar.Position = UDim2.new(0.00, 0.00, 0.13, 0.00)
+Bar.BorderSizePixel = 0
+Bar.BackgroundTransparency = 0.10000000149011612
+Bar.BackgroundColor3 = Color3.new(0.00, 0.00, 0.00)
+Bar.Parent = BackGround
+
+local VisualsButton = Instance.new("TextButton")
+VisualsButton.Name = "VisualsButton"
+VisualsButton.TextWrapped = true
+VisualsButton.BorderSizePixel = 0
+VisualsButton.TextScaled = true
+VisualsButton.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
+VisualsButton.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+VisualsButton.TextSize = 40
+VisualsButton.Size = UDim2.new(0.00, 156.00, 0.00, 50.00)
+VisualsButton.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+VisualsButton.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+VisualsButton.Text = "Visuals"
+VisualsButton.BackgroundTransparency = 0.75
+VisualsButton.Position = UDim2.new(0.00, 9.00, 0.00, 86.00)
+VisualsButton.TextXAlignment = Enum.TextXAlignment.Right
+VisualsButton.Parent = BackGround
+
+local ImageLabel = Instance.new("ImageLabel")
+ImageLabel.BorderSizePixel = 0
+ImageLabel.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
+ImageLabel.Image = "rbxassetid://7231140025"
+ImageLabel.Size = UDim2.new(0.00, 50.00, 0.00, 50.00)
+ImageLabel.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.Position = UDim2.new(0.04, 0.00, 0.00, 0.00)
+ImageLabel.Parent = VisualsButton
+
+local VisualSettings = Instance.new("Frame")
+VisualSettings.Name = "VisualSettings"
+VisualSettings.Size = UDim2.new(0.00, 673.00, 0.00, 416.00)
+VisualSettings.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+VisualSettings.Position = UDim2.new(1.04, 0.00, -0.20, 0.00)
+VisualSettings.BorderSizePixel = 0
+VisualSettings.BackgroundTransparency = 0.75
+VisualSettings.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
+VisualSettings.Parent = VisualsButton
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = VisualSettings
+
+local UIStroke_1 = Instance.new("UIStroke")
+UIStroke_1.Thickness = 2.799999952316284
+UIStroke_1.Parent = VisualSettings
+
+local Padding = Instance.new("Frame")
+Padding.Name = "Padding"
+Padding.Size = UDim2.new(0.00, 185.00, 0.00, 341.00)
+Padding.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Padding.Position = UDim2.new(0.02, 0.00, 0.18, 0.00)
+Padding.BorderSizePixel = 0
+Padding.BackgroundTransparency = 1
+Padding.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
+Padding.Parent = VisualSettings
+
+local UIListLayout = Instance.new("UIListLayout")
+UIListLayout.Padding = UDim.new(0.00, 9.00)
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Parent = Padding
+
+local Other = Instance.new("TextButton")
+Other.Name = "Other"
+Other.TextWrapped = true
+Other.BorderSizePixel = 0
+Other.TextScaled = true
+Other.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+Other.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+Other.TextSize = 14
+Other.Size = UDim2.new(0.00, 148.00, 0.00, 50.00)
+Other.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+Other.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Other.Text = "Other"
+Other.BackgroundTransparency = 0.20000000298023224
+Other.Position = UDim2.new(-0.01, 0.00, -0.01, 0.00)
+Other.Parent = Padding
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = Other
+
+local ColorLabel = Instance.new("TextButton")
+ColorLabel.Name = "ColorLabel"
+ColorLabel.TextWrapped = true
+ColorLabel.BorderSizePixel = 0
+ColorLabel.TextScaled = true
+ColorLabel.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+ColorLabel.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+ColorLabel.TextSize = 14
+ColorLabel.Size = UDim2.new(0.00, 148.00, 0.00, 50.00)
+ColorLabel.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+ColorLabel.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+ColorLabel.Text = "Color:"
+ColorLabel.ClipsDescendants = true
+ColorLabel.BackgroundTransparency = 0.20000000298023224
+ColorLabel.Position = UDim2.new(-0.01, 0.00, -0.01, 0.00)
+ColorLabel.Parent = Padding
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = ColorLabel
+
+local Other_1 = Instance.new("TextButton")
+Other_1.Name = "Other"
+Other_1.TextWrapped = true
+Other_1.BorderSizePixel = 0
+Other_1.TextScaled = true
+Other_1.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+Other_1.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+Other_1.TextSize = 14
+Other_1.Size = UDim2.new(0.00, 148.00, 0.00, 50.00)
+Other_1.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+Other_1.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Other_1.Text = "Other"
+Other_1.BackgroundTransparency = 0.20000000298023224
+Other_1.Position = UDim2.new(-0.01, 0.00, -0.01, 0.00)
+Other_1.Parent = Padding
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = Other_1
+
+local Other_1 = Instance.new("TextButton")
+Other_1.Name = "Other"
+Other_1.TextWrapped = true
+Other_1.BorderSizePixel = 0
+Other_1.TextScaled = true
+Other_1.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+Other_1.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+Other_1.TextSize = 14
+Other_1.Size = UDim2.new(0.00, 148.00, 0.00, 50.00)
+Other_1.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+Other_1.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Other_1.Text = "Other"
+Other_1.BackgroundTransparency = 0.20000000298023224
+Other_1.Position = UDim2.new(-0.01, 0.00, -0.01, 0.00)
+Other_1.Parent = Padding
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = Other_1
+
+local On_Off = Instance.new("TextButton")
+On_Off.Name = "On/Off"
+On_Off.TextWrapped = true
+On_Off.BorderSizePixel = 0
+On_Off.TextScaled = true
+On_Off.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+On_Off.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+On_Off.TextSize = 14
+On_Off.Size = UDim2.new(0.00, 610.00, 0.00, 50.00)
+On_Off.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+On_Off.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+On_Off.Text = "On"
+On_Off.BackgroundTransparency = 0.20000000298023224
+On_Off.Position = UDim2.new(0.05, 0.00, 0.02, 0.00)
+On_Off.Parent = VisualSettings
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = On_Off
+
+local Colors = Instance.new("Frame")
+Colors.Name = "Colors"
+Colors.Size = UDim2.new(0.00, 459.00, 0.00, 49.00)
+Colors.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Colors.Position = UDim2.new(0.27, 0.00, 0.18, 0.00)
+Colors.BorderSizePixel = 0
+Colors.BackgroundTransparency = 1
+Colors.BackgroundColor3 = Color3.new(1.00, 1.00, 1.00)
+Colors.Parent = VisualSettings
+
+local Color_3 = Instance.new("TextBox")
+Color_3.Name = "Color_3"
+Color_3.TextWrapped = true
+Color_3.BorderSizePixel = 0
+Color_3.TextScaled = true
+Color_3.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+Color_3.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+Color_3.TextSize = 14
+Color_3.Size = UDim2.new(0.00, 113.00, 0.00, 50.00)
+Color_3.TextTransparency = 0.46000000834465027
+Color_3.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+Color_3.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Color_3.Text = ""
+Color_3.BackgroundTransparency = 0.20000000298023224
+Color_3.Position = UDim2.new(0.00, 0.00, 2.73, 0.00)
+Color_3.Parent = Colors
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = Color_3
+
+local UIListLayout_1 = Instance.new("UIListLayout")
+UIListLayout_1.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_1.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_1.Padding = UDim.new(0.00, 10.00)
+UIListLayout_1.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_1.Parent = Colors
+
+local Color1 = Instance.new("TextBox")
+Color1.Name = "Color1"
+Color1.TextWrapped = true
+Color1.BorderSizePixel = 0
+Color1.TextScaled = true
+Color1.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+Color1.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+Color1.TextSize = 14
+Color1.Size = UDim2.new(0.00, 113.00, 0.00, 50.00)
+Color1.TextTransparency = 0.46000000834465027
+Color1.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+Color1.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Color1.Text = ""
+Color1.BackgroundTransparency = 0.20000000298023224
+Color1.Position = UDim2.new(0.04, 0.00, -0.01, 0.00)
+Color1.Parent = Colors
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = Color1
+
+local Color2 = Instance.new("TextBox")
+Color2.Name = "Color2"
+Color2.TextWrapped = true
+Color2.BorderSizePixel = 0
+Color2.TextScaled = true
+Color2.BackgroundColor3 = Color3.new(0.26, 0.14, 0.58)
+Color2.FontFace = Font.new("rbxasset://fonts/families/Oswald.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+Color2.TextSize = 14
+Color2.Size = UDim2.new(0.00, 113.00, 0.00, 50.00)
+Color2.TextTransparency = 0.46000000834465027
+Color2.TextColor3 = Color3.new(0.87, 0.87, 0.87)
+Color2.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
+Color2.Text = ""
+Color2.BackgroundTransparency = 0.20000000298023224
+Color2.Position = UDim2.new(0.04, 0.00, -0.01, 0.00)
+Color2.Parent = Colors
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = Color2
+
+local UICorner_1 = Instance.new("UICorner")
+UICorner_1.Parent = VisualsButton
+
+
+
+
+
+
+
+--- Opening and closing ---
+
+
+local onopen = true
+local shiftPressed = false
+local fPressed = false
+
+UserInputService.InputBegan:Connect(function(inputObject)
+	if inputObject.KeyCode == Enum.KeyCode.LeftShift then
+		shiftPressed = true
+	elseif inputObject.KeyCode == Enum.KeyCode.F then
+		fPressed = true
+	end
+
+	if shiftPressed and fPressed then
+		if db == false then
+			ScreenGui.Enabled = true
+			db = true
+			if onopen == true then
+				VisualSettings.Visible = true
+			
+			end
+		elseif db == true then
+			ScreenGui.Enabled = false
+			db = false
+			
+		end
+
+
+
+	end
+end)
+
+UserInputService.InputEnded:Connect(function(inputObject)
+	if inputObject.KeyCode == Enum.KeyCode.LeftShift then
+		shiftPressed = false
+	elseif inputObject.KeyCode == Enum.KeyCode.F then
+		fPressed = false
+		
+	end
+end)
+
+
+--- Open-close script END ---
+
+
+--- GUI END ---
+
+
+
+
+
+local function highlightPlayer(player)
+	local highlight = Instance.new("Highlight")
+	highlight.FillColor = Color3.fromRGB(255, 0, 4)
+	highlight.OutlineColor = Color3.fromRGB(0, 0, 0)
+	highlight.FillTransparency = 0.1
+	highlight.Enabled = true
+	highlight.Parent = player.Character
+end
+
+-- Function to highlight all players in the game
+local function highlightAllPlayers()
+	for _, player in ipairs(game.Players:GetPlayers()) do
+		if player.Character then
+			highlightPlayer(player)
+		end
+	end
+end
+
+-- Highlight all players when the script starts
+highlightAllPlayers()
+
+-- Highlight all players again if a new player joins
+game.Players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(function()
+		highlightPlayer(player)
+	end)
+end)
+
+
+--- Remove HighLights ---
+
+
+local function RemoveHighlight(player)
+	local highlight = player.Character:FindFirstChild("Highlight")
+	if highlight then
+		highlight:Destroy()
+	end
+end
+
+
+
+local function RemoveAllHighLights()
+	for _, player in ipairs(game.Players:GetPlayers()) do
+		if player.Character then
+			RemoveHighlight(player)
+		end
+	end
+end
+
+--- Visual Select --- 
+
+
+
+
+
+
+
+-- Visual Settings ---
+
+local HighlightDB = true
+
+-- HighLight On/Off ---
+On_Off.MouseButton1Up:Connect(function()
+	if HighlightDB == true then
+		RemoveAllHighLights()
+		HighlightDB = false
+		On_Off.Text = "Off"
+		
+	elseif HighlightDB == false then
+		highlightAllPlayers()
+		HighlightDB = true
+		On_Off.Text = "On"
+	end
+end)
+
+--- Highlight Color ---
+
+
+
+	local function updateColor()
+		local Color1A = tonumber(Color1.Text)
+		local Color2A = tonumber(Color2.Text)
+		local Color_3A = tonumber(Color_3.Text)
+
+		for _, player in ipairs(game.Players:GetPlayers()) do
+		if player.Character then
+			local highlight = player.Character:FindFirstChild("Highlight")
+			if highlight then
+				highlight.FillColor = Color3.fromRGB(Color1A, Color2A, Color_3A)
+			end
+		end
+	end
+	end
+
+Color1.FocusLost:Connect(updateColor)
+Color2.FocusLost:Connect(updateColor)
+Color_3.FocusLost:Connect(updateColor)
